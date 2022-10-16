@@ -14,23 +14,51 @@ public class WhileLoops {
 
     public static void eoCount(ArrayList<Integer> numList) {
         int even=0, odd=0;
-        for(int num : numList) {
-            if(num % 2 == 0) {
+/**
+ * Hi Mr. Hartman, this is your for loop for eoCount.
+ */
+//        for(int num : numList) {
+//            if(num % 2 == 0) {
+//                even++;
+//            } else {
+//                odd++;
+//            }
+//        }
+/**
+ * This is my while loop that does the same thing as your for loop.
+ */
+        int i = 0;
+        while(i < numList.size()) {
+            if(numList.get(i) % 2 == 0) {
                 even++;
             } else {
                 odd++;
             }
+            i++;
         }
+
         System.out.printf("Even Count is %d%nOdd Count is %d%n", even, odd);
     }
 
     public static double mean(ArrayList<Integer> numList) {
         double sum = 0.0;
+/**
+ * Hi Mr. Hartman, this is your for loop for calculating the mean.
+ */
 
-        for(int num : numList) {
-            // add list values with sum variable one-by-one.
-            sum += num;
+//        for(int num : numList) {
+//            // add list values with sum variable one-by-one.
+//            sum += num;
+//        }
+/**
+ * This is my while loop code for doing the same thing.
+ */
+        int i = 0;
+        while (i < numList.size()) {
+            sum += numList.get(i);
+            i++;
         }
+
         double mean = sum / numList.size();
         System.out.printf("The mean is: %f", mean);
         return mean;
